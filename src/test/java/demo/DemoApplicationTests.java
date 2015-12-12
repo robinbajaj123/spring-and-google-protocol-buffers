@@ -43,7 +43,7 @@ public class DemoApplicationTests {
     public void contextLoaded() {
 
         ResponseEntity<CustomerProtos.Customer> customer = restTemplate.getForEntity(
-                "http://127.0.0.1:7001/demo-0.0.1-SNAPSHOT/customers/2", CustomerProtos.Customer.class);
+                "http://localhost:7001/demo-0.0.1-SNAPSHOT/customers/2", CustomerProtos.Customer.class);
 
         System.out.println("customer retrieved: " + customer.toString());
 
