@@ -14,9 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(classes = CustomerRestController.class)
-//@WebAppConfiguration
-//@IntegrationTest
 @ContextConfiguration
 public class DemoApplicationTests {
 
@@ -37,13 +34,11 @@ public class DemoApplicationTests {
     @Autowired
     private RestTemplate restTemplate;
 
-    //private int port = 7001;
-
     @Test
     public void contextLoaded() {
-
+    	
         ResponseEntity<CustomerProtos.Customer> customer = restTemplate.getForEntity(
-                "http://localhost:7001/demo-0.0.1-SNAPSHOT/customers/2", CustomerProtos.Customer.class);
+                "http://localhost:7001/demo-0.0.1-SNAPSHOT/ws/customers/2", CustomerProtos.Customer.class);
 
         System.out.println("customer retrieved: " + customer.toString());
 

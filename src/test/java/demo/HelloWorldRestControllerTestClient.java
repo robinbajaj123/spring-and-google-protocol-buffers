@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.springframework.web.client.RestTemplate;
 
-public class SpringRestTestClient {
+public class HelloWorldRestControllerTestClient {
 
 	public static final String REST_SERVICE_URI = "http://localhost:7001/demo-0.0.1-SNAPSHOT";
 	
